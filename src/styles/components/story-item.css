@@ -1,0 +1,111 @@
+.story-item {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--space-xl);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.story-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.story-item__image-container {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.story-item__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-item__content {
+  flex-grow: 1;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.story-item__meta {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-sm);
+  font-size: var(--font-small);
+  color: var(--text-light);
+}
+
+.story-item__author,
+.story-item__date,
+.story-item__location {
+  display: flex;
+  align-items: center;
+  margin-right: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.story-item__author i,
+.story-item__date i,
+.story-item__location i {
+  margin-right: var(--space-xs);
+}
+
+.story-item__title {
+  margin: 0 0 var(--space-sm);
+  font-size: var(--font-large);
+}
+
+.story-item__link {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.story-item__link:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.story-item__description {
+  margin: 0 0 var(--space-md);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.story-item__actions {
+  margin-top: auto;
+}
+
+/* Empty stories state */
+.stories-empty {
+  text-align: center;
+  padding: var(--space-xl);
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stories-empty__icon {
+  font-size: 48px;
+  color: var(--text-light);
+  margin-bottom: var(--space-md);
+}
+
+.stories-list {
+  margin-top: var(--space-lg);
+}
+
+@media screen and (max-width: 768px) {
+  .story-item {
+    flex-direction: column;
+  }
+
+  .story-item__image-container {
+    width: 100%;
+    height: 200px;
+  }
+}
